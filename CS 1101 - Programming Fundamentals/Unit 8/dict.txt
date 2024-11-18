@@ -1,0 +1,17 @@
+{
+argentina: blue, white, yellow
+bolivia: red, yellow, green
+brazil: green, yellow, blue, white
+chile: red, white, blue
+colombia: yellow, blue, red
+ecuador: yellow, blue, red
+falkland_islands: blue, white, red
+french_guiana: yellow, green, red
+guyana: green, yellow, black, white
+paraguay: red, white, blue
+peru: red, white, red
+suriname: green, white, red, yellow
+trinidad_and_tobago: red, white, black
+uruguay: blue, white, yellow
+venezuela: yellow, blue, red
+}

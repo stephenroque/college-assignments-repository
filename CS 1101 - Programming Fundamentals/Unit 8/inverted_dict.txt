@@ -1,0 +1,8 @@
+{
+blue: argentina, brazil, chile, colombia, ecuador, falkland_islands, paraguay, uruguay, venezuela
+white: argentina, brazil, chile, falkland_islands, guyana, paraguay, peru, suriname, trinidad_and_tobago, uruguay
+yellow: argentina, bolivia, brazil, colombia, ecuador, french_guiana, guyana, suriname, uruguay, venezuela
+red: bolivia, chile, colombia, ecuador, falkland_islands, french_guiana, paraguay, peru, peru, suriname, trinidad_and_tobago, venezuela
+green: bolivia, brazil, french_guiana, guyana, suriname
+black: guyana, trinidad_and_tobago
+}
