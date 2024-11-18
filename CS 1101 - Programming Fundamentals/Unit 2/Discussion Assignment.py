@@ -52,7 +52,3 @@ print_message()
 print(message)
 
 #In this example, we have a global variable and a function that defines a local variable with the same name. When the function is called, it prints the value of the local variable. When the variable is printed outside the function, it prints the value of the global variable. The local variable is not visible outside the function, in the same way that the global variable cannot be read inside the function.
-
-#Question
-
-#In Python, what is the purpose of a return statement in a function? Explain how the returned value can be utilized outside the function.

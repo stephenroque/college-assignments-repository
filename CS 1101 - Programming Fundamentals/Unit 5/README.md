@@ -1,32 +1,89 @@
-**1. Display n characters from left:** The function display\_n\_chars is
-designed to extract a specified number of characters from the beginning
-of a given string. This function accepts two parameters: a string,
-referred to as name, and an integer, num. The integer num represents the
-number of characters to be extracted from the string. The function
-employs the slicing technique in Python, denoted by name\[:num\], to
-extract the leftmost n characters from the string. The result of this
-operation, which is a substring of the original name, is then printed to
-the console.
+# Projects Unit 5
 
-**2. Count the number of vowels:** The count\_vowels function is tasked
-with determining the total number of vowels present in a user's name.
-This function operates by iterating over each character in the name
-string. For each character, the function checks if it is a vowel. If the
-character is a vowel, it contributes to the total vowel count. Once all
-characters in the name have been examined, the function prints the final
-vowel count.
+This Python program demonstrates three string operations on a user-defined name:
 
-**3. Reverse it:** The reverse function is used to reverse the order of
-characters in the user's name. This function works by iterating over
-each character in the name string. For each character, the function adds
-it to the left of a variable named reversed. This operation effectively
-reverses the order of characters in the name. The function then prints
-the reversed name.
+1. Displaying a specified number of characters from the left of the name.  
+2. Counting the total number of vowels in the name.  
+3. Reversing the name.  
 
-**Conclusion:** The main program begins by displaying the name. It then
-prompt the user to input the number of characters they wish to display
-from the left of their name. It calls each of the above functions in
-turn, passing the user's name and the input number as arguments. Each
-function performs its specified operation on the name and prints the
-result. This way, the user can see the initial characters of the name,
-the number of vowels in the name, and the name in reverse order.
+---
+
+## Code Breakdown
+
+### 1. Display n Characters from the Left
+**Function:** `display_n_chars(name, num)`  
+This function extracts the first `n` characters of the string `name` using Python slicing (`name[:num]`).  
+The extracted substring is then displayed.  
+
+**Example:**  
+Input: `name = "Stephen", num = 4`  
+Output: `Step`
+
+---
+
+### 2. Count the Number of Vowels
+**Function:** `count_vowels(name)`  
+This function calculates the number of vowels (`a, e, i, o, u`, both uppercase and lowercase) in the string `name`.  
+It iterates through each character in `name` and checks if it's a vowel, incrementing the count for every match.  
+
+**Example:**  
+Input: `name = "Stephen"`  
+Output: `2`
+
+---
+
+### 3. Reverse the Name
+**Function:** `reverse(name)`  
+This function reverses the string `name` using a loop, where each character is added to the front of a new string.  
+The reversed string is then displayed.  
+
+**Example:**  
+Input: `name = "Stephen"`  
+Output: `nehpeteS`
+
+---
+
+## Input and Output Example
+
+### Input:
+- **Name:** Stephen (predefined in the script).
+- **Number of characters to display:** 4  
+
+### Output:
+```plaintext
+Stephen
+Enter the number of characters to display: 4
+1. Display 4 characters from the left: Step
+2. Count the number of vowels: 2
+3. Reversed name: nehpeteS
+```
+
+---
+
+## How to Run
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/stephenroque/college-assignments-repository.git
+   ```
+2. Navigate to the project folder:
+   ```bash
+   cd college-assignments-repository/CS\ 1101\ -\ Programming\ Fundamentals/Unit\ 5/
+   ```
+3. Open the script in a Python environment.
+4. Set the `name` variable in the script to your desired string.
+5. Run the script:
+   ```bash
+   python Programming\ Assignment\ Unit\ 5.py
+   ```
+6. Enter the number of characters you want to display from the left of the name when prompted.
+
+---
+
+## ⚠️ Disclaimer
+
+- This repository is for **educational purposes only**. 
+- Please do not use the content here to submit assignments as your own. Always adhere to your institution’s academic integrity policies. 
+
+## 💡 About Me
+
+Hi, I'm **Stephen Roque**, a passionate Computer Science student at the University of the People. I'm always looking to learn and collaborate on new projects. Check out my [GitHub profile](https://github.com/stephenroque) to see more of my projects and contributions. **Connect with me on my [LinkedIn profile](https://www.linkedin.com/in/stephenroque/)!**

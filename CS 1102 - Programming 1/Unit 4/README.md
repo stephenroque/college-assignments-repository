@@ -1,98 +1,102 @@
-**Stock Analyzer Documentation**
+# Stock Analyzer
 
-**Overview**
+This Java-based program provides a set of utility methods for analyzing stock price data. It supports both array and `ArrayList` representations of stock prices and includes functions to calculate the average price, find the maximum price, count occurrences of a specific price, and compute the cumulative sum of stock prices.
 
-The Stock Analyzer program is a Java application designed to perform
-various operations on a set of stock prices. It provides functionality
-to calculate the average price, find the maximum price, count
-occurrences of a specific price, and compute the cumulative sum of stock
-prices. The program supports both arrays and ArrayLists of stock prices.
+## Features
 
-**Running the Program**
+1. **Calculate Average Price**:
+   - Computes the average price from an array or an `ArrayList` of stock prices.
+   
+2. **Find Maximum Price**:
+   - Finds the maximum stock price from an array or an `ArrayList`.
 
-1. **Compile the Code:** Use a Java compiler to compile the
-    'StockAnalyzer.java' file. Open a terminal or command prompt and
-    navigate to the directory containing the Java file.
+3. **Count Occurrences of a Specific Price**:
+   - Counts how many times a specific price appears in an array or an `ArrayList`.
 
-> javac StockAnalyzer.java
+4. **Compute Cumulative Sum**:
+   - Computes the cumulative sum of stock prices, giving the total sum up to each index.
 
-2. **Run the Program:** Execute the compiled Java file using the 'java'
-    command.
+## Methods
 
-> java StockAnalyzer
+1. **`calculateAveragePrice(float[] prices)`**:
+   - Calculates the average stock price for an array of prices.
+   - Returns the average price as a float.
 
-**Interface**
+2. **`calculateAveragePrice(ArrayList<Float> prices)`**:
+   - Calculates the average stock price for an `ArrayList` of prices.
+   - Returns the average price as a float.
 
-The Stock Analyzer program provides a simple command-line interface for
-interacting with the functionality. Here\'s how to interact with the
-administrator interface:
+3. **`findMaximumPrice(float[] prices)`**:
+   - Finds the maximum stock price in an array.
+   - Returns the maximum price as a float.
 
-1.  Upon running the program, it will display the calculated results for
-    average price, maximum price, occurrences of a specific price, and
-    cumulative sum of stock prices.
+4. **`findMaximumPrice(ArrayList<Float> prices)`**:
+   - Finds the maximum stock price in an `ArrayList`.
+   - Returns the maximum price as a float.
 
-2.  The results will be displayed for both array-based and
-    ArrayList-based data.
+5. **`countOccurrences(float[] prices, float targetPrice)`**:
+   - Counts how many times the target price appears in the array of stock prices.
+   - Returns the count as an integer.
 
-3.  You can customize the input stock prices by modifying the
-   **pricesArray** and**pricesArrayList** variables in the**main**
-    method of the program.
+6. **`countOccurrences(ArrayList<Float> prices, float targetPrice)`**:
+   - Counts how many times the target price appears in the `ArrayList` of stock prices.
+   - Returns the count as an integer.
 
-4.  The program will prompt you with the results and exit once the
-    execution is complete.
+7. **`computeCumulativeSum(ArrayList<Float> prices)`**:
+   - Computes and returns an `ArrayList` of the cumulative sum of stock prices.
+   - The new list contains the running sum of prices.
 
-**Method Documentation**
+## Output Example
 
-**calculateAveragePrice**
+```plaintext
+Average price (array): 31.7
+Average price (ArrayList): 31.7
+Maximum price (array): 42.0
+Maximum price (ArrayList): 42.0
+Occurrences of 30.0 (array): 2
+Occurrences of 30.0 (ArrayList): 2
+Cumulative sum (ArrayList): [10.0, 30.0, 60.0, 100.0, 130.0, 155.0, 190.0, 232.0, 270.0, 297.0]
+```
 
--  **Description**: Calculates the average price of the stock prices.
+## How to Run
 
--  **Parameters**:
+### Prerequisites
+- Java Development Kit (JDK) installed.
 
-    -  **prices**: An array of float representing the stock prices.
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/stephenroque/college-assignments-repository.git
+   ```
 
-    -  **prices**: An ArrayList of Float representing the stock prices.
+2. Navigate to the project folder:
+   ```bash
+   cd college-assignments-repository/CS\ 1102\ -\ Programming\ 1/Unit\ 4/
+   ```
 
--  **Return Value**: The average price of the stock prices as a float.
+3. **Compile the Java Program**:
+   ```bash
+   javac StockAnalyzer.java
+   ```
 
-**findMaximumPrice**
+4. **Run the Program**: After compiling, run the program with the following command:
+   ```bash
+   java StockAnalyzer
+   ```
 
--  **Description**: Finds the maximum price among all the stock prices.
+5. **Test with Your Own Data**: You can modify the `pricesArray` or `pricesArrayList` with your own stock prices and experiment with the different methods.
 
--  **Parameters**:
+## Technologies Used
 
-    -  **prices**: An array of float representing the stock prices.
+- **Java**: The program is written in Java and uses basic control structures like loops and conditionals to process the stock price data.
 
-    -  **prices**: An ArrayList of Float representing the stock prices.
+---
 
--  **Return Value**: The maximum price among all the stock prices as a
-    float.
+## ⚠️ Disclaimer
 
-**countOccurrences**
+- This repository is for **educational purposes only**. 
+- Please do not use the content here to submit assignments as your own. Always adhere to your institution’s academic integrity policies. 
 
--  **Description**: Determines the occurrence count of a specific price
-    in the stock prices.
+## 💡 About Me
 
--  **Parameters**:
-
-    -  **prices**: An array of float representing the stock prices.
-
-    -  **prices**: An ArrayList of Float representing the stock prices.
-
-    -  **targetPrice**: The target price whose occurrences need to be
-        counted.
-
--  **Return Value**: The number of times the target price occurs in the
-    stock prices as an integer.
-
-**computeCumulativeSum**
-
--  **Description**: Computes the cumulative sum of stock prices at each
-    position.
-
--  **Parameters**:
-
-    -  **prices**: An ArrayList of Float representing the stock prices.
-
--  **Return Value**: An ArrayList of Float containing the cumulative
-    sum of prices at each position.
+Hi, I'm **Stephen Roque**, a passionate Computer Science student at the University of the People. I'm always looking to learn and collaborate on new projects. Check out my [GitHub profile](https://github.com/stephenroque) to see more of my projects and contributions. **Connect with me on my [LinkedIn profile](https://www.linkedin.com/in/stephenroque/)!**

@@ -1,105 +1,120 @@
-**Student Management System GUI Application Documentation**
+# Student Management System
 
-**1. Introduction**
+This project implements a **Student Management System** using Java Swing for the graphical user interface (GUI). It allows users to manage student records, enroll students in courses, assign grades, and view student details. The system stores student information, course enrollments, and grades in a simple in-memory data structure.
 
-The Student Management System GUI Application is designed to provide
-administrators with a user-friendly interface for managing student
-records, course enrollment, and grades. This document aims to provide
-comprehensive documentation for the purpose, functionality, and usage of
-each component, event handler, and feature within the application.
+## Project Structure
 
-**2. GUI Components**
+### **Classes and Panels**
 
-**a. MainFrame**
+- **MainFrame**  
+  The main window of the application, displaying a tabbed interface with sections for managing students, updating records, assigning grades, enrolling in courses, and viewing student details.
 
-\- Purpose: The main frame serves as the primary container for the
-entire application. It houses multiple tabs, each representing a
-different functionality of the Student Management System.
+- **AddStudentForm**  
+  A form panel to add a new student, including fields for the student's ID and name. Once the user fills out the form and clicks the "Add Student" button, the student's details are saved.
 
-\- Functionality: MainFrame includes tabs for \"Add Student\", \"Update
-Student\", \"Assign Grades\", \"Course Enrollment\", and \"View Student
-Details\".
+- **UpdateStudentForm**  
+  A form for updating existing student details. Allows the user to modify the name of a student based on their ID.
 
-\- Usage: Administrators can navigate between tabs to perform various
-tasks related to student management.
+- **GradeManagementPanel**  
+  Allows administrators to assign grades to students in specific courses. The panel contains fields for student ID, course name, and grade.
 
-**b. AddStudentForm**
+- **CourseEnrollmentPanel**  
+  A form for enrolling students in courses. It allows users to input a student ID and course name, and then enroll the student in that course with an initial grade of "Not Graded."
 
-\- Purpose: This form allows administrators to add new students to the
-system by entering their information such as ID, name, and grade.
+- **ViewStudentDetailsPanel**  
+  Displays a table of all registered students, showing their IDs and names. This allows administrators to view all students in the system.
 
-\- Functionality: Upon filling out the required fields and clicking the
-\"Add Student\" button, the new student is added to the system.
+- **StudentManagementPanel**  
+  A panel that combines the student addition form with a table of student records, allowing easy management and viewing of students.
 
-\- Usage: Administrators input student details and click the button to
-add them to the database.
+- **StudentTableModel**  
+  A custom table model for displaying student data in a JTable. It binds the student information to the table and supports dynamic updates.
 
-**c. UpdateStudentForm**
+- **ErrorHandlingUtility**  
+  A utility class that provides a method for displaying error messages using `JOptionPane`.
 
-\- Purpose: The update student form enables administrators to modify
-existing student information.
+- **DataStore**  
+  A class for managing the student records and grades. It contains a map to store students by their ID and another map to store grades by student ID and course.
 
-\- Functionality: Administrators select a student from a dropdown menu,
-edit the necessary fields, and click the \"Update\" button to save
-changes.
+- **Enrollment**  
+  A class that represents the relationship between a student, a course, and the assigned grade. It contains getter and setter methods for managing enrollment data.
 
-\- Usage: Users select a student, update their information, and save the
-changes.
+- **EnrollmentController**  
+  A controller class responsible for handling the enrollment logic, although its functionality is currently empty.
 
-**d. GradeManagementPanel**
+- **Student**  
+  A class representing a student with an ID and name. This class provides getter and setter methods for these attributes.
 
-\- Purpose: This panel facilitates the assignment of grades to students
-for their enrolled courses.
+- **Course**  
+  A class representing a course with a name attribute.
 
-\- Functionality: Administrators select a student from a dropdown menu,
-choose a course, assign a grade, and click the \"Assign Grade\" button
-to save the grade.
+## Features
 
-\- Usage: Administrators select a student, choose a course, assign a
-grade, and save the changes.
+1. **Add Student**  
+   Users can add new students to the system by entering their ID and name. The system will validate that all fields are filled before adding the student.
 
-**e. CourseEnrollmentPanel**
+2. **Update Student**  
+   Allows users to update the name of an existing student by entering their ID and a new name. It will show an error message if the student ID is not found.
 
-\- Purpose: The course enrollment panel allows administrators to enroll
-students in courses.
+3. **Enroll Student in Course**  
+   Students can be enrolled in courses by specifying their student ID and the course name. The system automatically assigns a grade of "Not Graded" upon enrollment.
 
-\- Functionality: Administrators input the student ID and the course
-they wish to enroll in, then click the \"Enroll Student\" button to
-complete the process.
+4. **Assign Grades**  
+   Administrators can assign grades to students for specific courses. The grade is stored in the system and can be updated.
 
-\- Usage: Administrators input student ID and course, then enroll the
-student in the selected course.
+5. **View Student Details**  
+   A tab that displays a list of all students currently in the system with their ID and name, using a `JTable` for easy viewing.
 
-**f. ViewStudentDetailsPanel**
+6. **Error Handling**  
+   If any form fields are left blank or the student is not found, appropriate error messages will be displayed.
 
-\- Purpose: This panel displays a table with a list of students and
-their details.
+## User Interface Overview
 
-\- Functionality: It retrieves student records from the database and
-populates the table with the relevant information.
+The user interface is based on a tabbed layout:
 
-\- Usage: Administrators can view the list of students and their
-details, facilitating easy access to student records.
+- **Add Student**: A form to add new students.
+- **Update Student**: A form to update student information.
+- **Assign Grades**: A form to assign grades to students.
+- **Course Enrollment**: A form for enrolling students in courses.
+- **View Student Details**: Displays a table of all students.
 
-**3. Event Handling**
+## How to Run
 
-Event handlers are implemented to respond to user interactions with
-various GUI components. These handlers execute specific actions based on
-user input, such as adding a student, updating student information,
-assigning grades, enrolling in courses, and viewing student details.
+### Prerequisites
+- JDK 8 or higher.
 
-**4. Dynamic Interface Updates**
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/stephenroque/college-assignments-repository.git
+   ```
+2. Navigate to the project folder:
+   ```bash
+   cd college-assignments-repository/CS\ 1102\ -\ Programming\ 1/Unit\ 7/StudentManagementSystem/src/
+   ```
 
-The GUI interface updates dynamically to reflect changes in student
-records, course enrollment, and grades. When new students are added,
-information is updated, or grades are assigned, the corresponding
-displays update automatically to reflect these changes without manual
-refreshing.
+### **Setup**
+1. Compile the Java files:
+   ```bash
+   javac *.java
+   ```
+2. Run the `StudentManagementSystem` class:
+   ```bash
+   java StudentManagementSystem
+   ```
 
-**5. Error Handling**
+## Data Store
 
-The application includes robust error handling mechanisms to provide
-informative error messages or dialog boxes when invalid inputs are
-provided or operations cannot be completed. This ensures a smooth and
-user-friendly experience by guiding administrators through exceptional
-situations.
+The system uses an in-memory data store represented by the `DataStore` class. This class uses:
+
+- **studentMap**: A `HashMap` to store students by their ID.
+- **grades**: A `HashMap` to store grades for students, with each student ID mapping to a nested map of course names and their corresponding grades.
+
+## ⚠️ Disclaimer
+
+- This repository is for **educational purposes only**. 
+- Please do not use the content here to submit assignments as your own. Always adhere to your institution’s academic integrity policies. 
+
+## 💡 About Me
+
+Hi, I'm **Stephen Roque**, a passionate Computer Science student at the University of the People. I'm always looking to learn and collaborate on new projects. Check out my [GitHub profile](https://github.com/stephenroque) to see more of my projects and contributions. **Connect with me on my [LinkedIn profile](https://www.linkedin.com/in/stephenroque/)!**

@@ -1,207 +1,132 @@
-**Course Enrollment and Grade Management System**
+# **Course Enrollment and Grade Management System**
+
+## **Overview**
+
+The **Course Enrollment and Grade Management System** is a Java-based application that allows administrators to manage courses, enroll students, assign grades, and calculate overall grades. The system is designed to simplify the enrollment process and grade management for educational institutions.
+
+### **Features:**
+- Add and manage courses.
+- Enroll students in courses with automatic capacity checks.
+- Assign grades to students for individual courses.
+- Calculate the overall grade for students based on their enrolled courses.
+- Command-line interface for administrators to interact with the system.
+
+---
+
+## **Project Structure**
+
+The project consists of the following main classes:
+
+1. **`Student.java`**: Represents a student and manages their enrollment in courses and grades.
+2. **`Course.java`**: Represents a course and handles enrollment, capacity checks, and grade assignments.
+3. **`CourseManagement.java`**: Manages the list of courses and students, providing methods to enroll students and calculate grades.
+4. **`AdministratorInterface.java`**: Provides a command-line interface for administrators to interact with the system.
+
+---
+
+## **Class Descriptions**
+
+### **Student**
+- **Purpose**: Represents a student and manages their enrollment in courses and the grades they receive.
+- **Key Methods**:
+  - `enrollInCourse(Course course)`: Enroll a student in a course if space is available.
+  - `assignGrade(Course course, double grade)`: Assign a grade to a student for a specific course.
+  - `getEnrolledCourses()`: Returns a map of courses the student is enrolled in with their respective grades.
+
+### **Course**
+- **Purpose**: Represents a course and tracks its enrolled students, course code, name, and maximum capacity.
+- **Key Methods**:
+  - `incrementEnrolledStudents()`: Increases the count of enrolled students if the course capacity allows.
+  - `getEnrolledStudents()`: Returns the current number of enrolled students.
+  - `getMaxCapacity()`: Returns the maximum capacity of the course.
+  - `getTotalEnrolledStudents()`: Returns the total number of enrolled students across all courses.
+
+### **CourseManagement**
+- **Purpose**: Manages all courses and students in the system.
+- **Key Methods**:
+  - `addCourse(String courseCode, String name, int maxCapacity)`: Adds a new course to the system.
+  - `enrollStudent(Student student, Course course)`: Enrolls a student in a specified course.
+  - `assignGrade(Student student, Course course, double grade)`: Assigns a grade to a student for a course.
+  - `calculateOverallGrade(Student student)`: Calculates and returns the overall grade for a student based on their enrolled courses.
+  
+### **AdministratorInterface**
+- **Purpose**: Provides a command-line interface for administrators to interact with the system.
+- **Key Methods**:
+  - `addNewCourse()`: Prompts the administrator to add a new course.
+  - `enrollStudentInCourse()`: Prompts the administrator to enroll a student in a course.
+  - `assignGradeToStudent()`: Allows the administrator to assign a grade to a student.
+  - `calculateStudentOverallGrade()`: Calculates and displays the overall grade for a student.
+
+---
+
+## **How to Run**
+
+### Prerequisites
+- JDK 8 or higher.
+
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/stephenroque/college-assignments-repository.git
+   ```
+2. Navigate to the project folder:
+   ```bash
+   cd college-assignments-repository/CS\ 1102\ -\ Programming\ 1/Unit\ 5/Course\ Enrollment\ and\ Grade\ Management\ System/src/
+   ```
+
+### **Setup**
+1. Compile the Java files:
+   ```bash
+   javac *.java
+   ```
+2. Run the administrator interface:
+   ```bash
+   java AdministratorInterface
+   ```
+
+### **Running the Program**
+Once you run the `AdministratorInterface`, the program will display a menu with the following options:
+1. **Add a new course**: Prompts the administrator to add a new course (course code, name, and capacity).
+2. **Enroll a student in a course**: Prompts the administrator to enroll a student (entering name, ID, and course code).
+3. **Assign a grade to a student**: Prompts the administrator to assign a grade to a student for a specific course.
+4. **Calculate overall grade for a student**: Prompts the administrator to calculate and display the overall grade for a student.
+5. **Exit**: Exits the program.
+
+### **Example Usage**
+1. **Add a Course**:
+   - Course Code: `CS101`
+   - Course Name: `Introduction to Computer Science`
+   - Maximum Capacity: `3`
+
+2. **Enroll a Student**:
+   - Student: `Alice`, ID: `S001`
+   - Enroll in Course: `CS101`
 
-**Project Overview**
+3. **Assign Grades**:
+   - Alice is assigned a grade of `85` for `CS101`.
 
-The Course Enrollment and Grade Management System is designed to manage
-student enrollment, grade assignment, and overall grade calculation for
-a university. It includes functionalities to add courses, enroll
-students, assign grades, and calculate overall grades through a
-command-line interface for administrators.
+4. **Calculate Overall Grade**:
+   - The system calculates the overall grade for Alice based on all enrolled courses.
 
-**Class and Method Documentation**
+---
 
-**Student Class**
+## **Design Details**
 
-**Purpose:** Represents a student and manages their enrollment in
-courses and grades.
+### **Data Structure**
+- **Student**: A `Map` holds courses as keys and grades as values for each student.
+- **Course**: A `List` of courses is managed by `CourseManagement`, where each course can enroll students up to its max capacity.
 
-**Instance Variables:**
+### **Error Handling**
+- **Course Enrollment**: Prevents students from enrolling in full courses.
+- **Grade Assignment**: Ensures grades are only assigned to students who are enrolled in the course.
 
--  **'private String name'**: The student\'s name.
+---
 
--  **'private String id'**: The student\'s ID.
+## ⚠️ Disclaimer
 
--  **'private Map\<Course, Double\> enrolledCourses'**: A map to store
-    courses the student is enrolled in along with their grades.
+- This repository is for **educational purposes only**. 
+- Please do not use the content here to submit assignments as your own. Always adhere to your institution’s academic integrity policies. 
 
-**Methods:**
+## 💡 About Me
 
--  **'public Student(String name, String id)'**: Constructor to
-    initialize the student\'s name and ID.
-
--  **'public String getName()'**: Returns the student\'s name.
-
--  **'public void setName(String name)'**: Sets the student\'s name.
-
--  **'public String getId()'**: Returns the student\'s ID.
-
--  **'public void setId(String id)'**: Sets the student\'s ID.
-
--  **'public void enrollInCourse(Course course)'**: Enrolls the student
-    in a course if capacity allows.
-
--  **'public void assignGrade(Course course, double grade)'**: Assigns
-    a grade to the student for a specific course.
-
--  **'public Map\<Course, Double\> getEnrolledCourses()'**: Returns the
-    map of courses and grades the student is enrolled in.
-
-**Course Class**
-
-**Purpose:** Represents a course and manages enrollment capacity.
-
-**Instance Variables:**
-
--  **'private String courseCode'**: The course code.
-
--  **'private String name'**: The course name.
-
--  **'private int maxCapacity'**: The maximum number of students that
-    can enroll.
-
--  **'private int enrolledStudents'**: The current number of enrolled
-    students.
-
-**Static Variables:**
-
--  **'private static int totalEnrolledStudents'**: Tracks the total
-    number of students enrolled in all courses.
-
-**Methods:**
-
--  **'public Course(String courseCode, String name, int
-    maxCapacity)'**: Constructor to initialize course details.
-
--  **'public String getCourseCode()'**: Returns the course code.
-
--  **'public String getName()'**: Returns the course name.
-
--  **'public int getMaxCapacity()'**: Returns the maximum capacity of
-    the course.
-
--  **'public int getEnrolledStudents()'**: Returns the current number
-    of enrolled students.
-
--  **'public void incrementEnrolledStudents()'**: Increments the count
-    of enrolled students if capacity allows.
-
--  **'public static int getTotalEnrolledStudents()'**: Returns the
-    total number of students enrolled in all courses.
-
-**CourseManagement Class**
-
-**Purpose:** Manages the list of courses and students, and provides
-methods to add courses, enroll students, assign grades, and calculate
-overall grades.
-
-**Static Variables:**
-
--  **'private static List\<Course\> courses'**: List to store all
-    courses.
-
--  **'private static List\<Student\> students'**: List to store all
-    students.
-
-**Methods:**
-
--  **'public static void addCourse(String courseCode, String name, int
-    maxCapacity)'**: Adds a new course to the list.
-
--  **'public static void enrollStudent(Student student, Course
-    course)'**: Enrolls a student in a course.
-
--  **'public static void assignGrade(Student student, Course course,
-    double grade)'**: Assigns a grade to a student for a specific
-    course.
-
--  **'public static double calculateOverallGrade(Student student)'**:
-    Calculates and returns the overall grade for a student.
-
--  **'public static List\<Course\> getCourses()'**: Returns the list of
-    courses.
-
--  **'public static List\<Student\> getStudents()'**: Returns the list
-    of students.
-
--  **'public static void addStudent(Student student)'**: Adds a student
-    to the list.
-
-**Administrator Interface**
-
-**Purpose:** Provides a command-line interface for administrators to
-interact with the system.
-
-**Methods:**
-
--  **'public static void main(String\[\] args)'**: Main method to run
-    the interface.
-
--  **'private static void displayMenu()'**: Displays the main menu
-    options.
-
--  **'private static void addNewCourse()'**: Prompts the administrator
-    to add a new course.
-
--  **'private static void enrollStudentInCourse()'**: Prompts the
-    administrator to enroll a student in a course.
-
--  **'private static void assignGradeToStudent()'**: Prompts the
-    administrator to assign a grade to a student.
-
--  **'private static void calculateStudentOverallGrade()'**: Prompts
-    the administrator to calculate a student\'s overall grade.
-
--  **'private static Course findCourseByCode(String courseCode)'**:
-    Finds a course by its code.
-
--  **'private static Student findStudentById(String studentId)'**:
-    Finds a student by their ID.
-
-**Static Methods and Variables**
-
--  **Static Variables:**
-
-    -  **'totalEnrolledStudents'** in**'Course'** class tracks the
-        total number of enrolled students across all courses.
-
-    -  **'courses'** and**'students'** in**'CourseManagement'** class
-        maintain lists of all courses and students respectively.
-
--  **Static Methods:**
-
-    -   Static methods in**'CourseManagement'** such as
-       **'addCourse'**,**'enrollStudent'**,**'assignGrade'**, and
-       **'calculateOverallGrade'** manipulate the static lists of
-        courses and students, providing centralized control over the
-        enrollment and grading process.
-
-**Running the Program**
-
-1.  Compile the Classes: Ensure you have all the classes (**'Student'**,
-   **'Course'**,**'CourseManagement'**, and
-   **'AdministratorInterface'**) in the same directory. Open a terminal
-    and navigate to this directory.
-
-2. **Compile the Classes**: Run the following commands:
-
--   javac Student.java
-
--   javac Course.java
-
--   javac CourseManagement.java
-
--   javac AdministratorInterface.java
-
-3. **Run the Administrator Interface**: Execute the main program:
-
--   java AdministratorInterface
-
-4. **Interact with the Interface:**
-
--   Follow the on-screen prompts to add courses, enroll students, assign
-    grades, and calculate overall grades.
-
--   Input the required information when prompted.
-
--   Select the appropriate menu options by entering the corresponding
-    number.
+Hi, I'm **Stephen Roque**, a passionate Computer Science student at the University of the People. I'm always looking to learn and collaborate on new projects. Check out my [GitHub profile](https://github.com/stephenroque) to see more of my projects and contributions. **Connect with me on my [LinkedIn profile](https://www.linkedin.com/in/stephenroque/)!**

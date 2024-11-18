@@ -1,59 +1,109 @@
-**Part 1**
+# Projects - Unit 2
 
-**Explanation:**
+This project contains three Python scripts with various examples and tasks to practice programming concepts such as functions, scope, parameters, and code reuse.
 
--   The function *print\_circum* encapsulates the logic for calculating
-    the circumference of a circle, promoting code reusability.
+## File Descriptions
 
--   The local variable *pi* is used to store the value of π, enhancing
-    code readability and allowing for easy modification if a more
-    precise value is needed.
+### 1. `Discussion Assignment Unit 2.py`
+This script demonstrates key programming concepts through examples:
 
--   The formula *circumference = 2 \* pi \* radius* calculates the
-    circumference based on the input radius.
+- **Example 1:** Difference between parameters and arguments.  
+- **Example 2:** Types of inputs for functions: values, variables, and expressions.  
+- **Example 3:** Demonstrating variable scope and encountering `NameError` when accessing local variables outside their function.  
+- **Example 4:** Using parameters and related scope errors.  
+- **Example 5:** Difference between global and local variables with the same name.
 
--   The *print* statement outputs the result in a user-friendly format,
-    including the calculated circumference.
+### 2. `Programming Assignment Unit 2.py`
+This script contains two practical tasks:
 
-**Part 2**
+- **Part 1:** A function to calculate the circumference of a circle based on its radius.  
+- **Part 2:** A function to create a product catalog for an online store, including discounted combo prices.
 
-**Explanation:**
+### 3. `ScriptMode.py`
+This script generates a grid of rows and columns using functions, demonstrating:
 
-The code defines a function named *print\_catalog* that takes three
-parameters (*item1*, *item2*, and *item3*). The function calculates the
-prices for different combinations of items using specified discount
-percentages for combo packs. It then constructs a catalog string,
-including the prices of individual items and the calculated combo
-prices, and finally prints the catalog.
+- Nested functions for code reuse.  
+- Creation of repetitive patterns like grids.  
+- Helper functions such as `do_twice` and `do_four` to repeat other functions multiple times.
 
--   The function calculates the prices for various combinations
-    (*combo1*, *combo2*, *combo3*, *combo4*) based on the given discount
-    percentages (*combo\_pack* and *gift\_pack*).
+## How to Run
 
--   The *catalog* string is constructed by concatenating various lines
-    containing product names and their prices.
+### Prerequisites
+- Python 3.x installed.
 
--   The *print\_catalog* function is called with the prices of three
-    items (*price\_item1*, *price\_item2*, *price\_item3*) as arguments.
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/stephenroque/college-assignments-repository.git
+   ```
+2. Navigate to the project folder:
+   ```bash
+   cd college-assignments-repository/CS\ 1101\ -\ Programming\ Fundamentals/Unit\ 2/
+   ```
+3. Run any script:
+   ```bash
+   python Discussion_Assignment_Unit_2.py
+   python Programming_Assignment_Unit_2.py
+   python ScriptMode.py
+   ```
 
-**Features Illustrated:**
+## Examples of Output
 
--  **Functions:** The code demonstrates the use of a function
-    (*print\_catalog*) to encapsulate a series of statements related to
-    generating a catalog. This promotes code reusability and
-    organization.
+### Example Output - `print_circum`
+Input:
+```python
+print_circum(10)
+```
+Output:
+```
+Circumference = 62.8318
+```
 
--  **Variables and Expressions:** The variables *combo1*, *combo2*,
-    *combo3*, and *combo4* store the calculated prices based on
-    expressions involving the given item prices and discount
-    percentages.
+### Example Output - `print_catalog`
+Input:
+```python
+price_item1=200.0
+price_item2=400.0
+price_item3=600.0
+print_catalog(price_item1,price_item2,price_item3)
+```
+Output:
+```
+Online Store
+----------------------
+Product(S)                  Price
+Item 1                      $200.0
+Item 2                      $400.0
+Item 3                      $600.0
+Combo 1(Item 1 + 2)         $540.0
+Combo 2(Item 2 + 3)         $900.0
+Combo 3(Item 1 + 3)         $720.0
+Combo 4(Item 1 + 2 + 3)     $900.0
+______________________
+For delivery Contact:98764678899
+```
 
--  **String Concatenation:** The *catalog* string is created by
-    concatenating multiple strings to build the final catalog output.
+### Example Output - `print_grid`
+Output:
+```
++ - - - - + - - - - +
+|         |         |
+|         |         |
+|         |         |
+|         |         |
++ - - - - + - - - - +
+|         |         |
+|         |         |
+|         |         |
+|         |         |
++ - - - - + - - - - +
+```
 
--  **Function Invocation:** The *print\_catalog* function is invoked
-    with specific arguments (*price\_item1*, *price\_item2*,
-    *price\_item3*) to generate and print the catalog.
+## ⚠️ Disclaimer
 
-The output represents a formatted catalog of an online store, including
-individual item prices and prices for various combo packs.
+- This repository is for **educational purposes only**. 
+- Please do not use the content here to submit assignments as your own. Always adhere to your institution’s academic integrity policies. 
+
+## 💡 About Me
+
+Hi, I'm **Stephen Roque**, a passionate Computer Science student at the University of the People. I'm always looking to learn and collaborate on new projects. Check out my [GitHub profile](https://github.com/stephenroque) to see more of my projects and contributions. **Connect with me on my [LinkedIn profile](https://www.linkedin.com/in/stephenroque/)!**

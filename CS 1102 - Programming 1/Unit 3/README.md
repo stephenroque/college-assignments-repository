@@ -1,102 +1,119 @@
-**Student Record Management System Documentation**
+# Student Record Management System
 
-**Overview**
+This Java-based Student Record Management System allows users to add new students, update student information, and view student details. It uses a simple console-based menu system to manage and interact with the student records.
 
-The Student Record Management System is a Java program designed to help
-administrators efficiently manage student records. It provides
-functionalities such as adding new students, updating student
-information, and viewing student details.
+## Features
 
-**Features**
+- **Add New Student**: Add a new student to the system with validation checks for unique student IDs, valid age input, and non-empty fields.
+- **Update Student Information**: Update details like name, age, or grade for existing students by their ID.
+- **View Student Details**: View the complete details of a student using their unique student ID.
+- **Data Validation**: Ensures proper input for student name, age, and grade, including checks for unique IDs and numeric age values.
 
-1. **Add New Student:** Allows administrators to add a new student to
-    the system by providing the student\'s name, ID, age, and grade.
+## Program Overview
 
-2. **Update Student Information**: Enables administrators to update the
-    information of an existing student, including their name, age, and
-    grade.
+1. **Student Class Representation**: 
+   - Student details (name, ID, age, and grade) are stored in a 2D array, where each student occupies a row.
+   - Each student’s record consists of four fields: Name, ID, Age, and Grade.
+   
+2. **Main Menu**:
+   - The system presents a menu with options:
+     1. Add a new student.
+     2. Update student information.
+     3. View student details.
+     4. Exit the program.
 
-3. **View Student Details:** Allows administrators to view the details
-    of a specific student by providing their student ID.
+3. **User Input**:
+   - The program uses the `Scanner` class to read input from the user, ensuring proper validation at each step.
+   
+4. **System Limitations**:
+   - The system assumes a maximum of 100 students (due to the fixed array size).
+   - It uses a 2D array (`students[][]`) to store the data, which can be extended to a more complex data structure like a database if needed.
 
-**Running the Program**
+## Example Output
 
-1. **Compile the Code:** Use a Java compiler to compile the
-    'StudentRecordManagementSystem.java' file. Open a terminal or
-    command prompt and navigate to the directory containing the Java
-    file.
+```plaintext
+Student Record Management System
+1. Add New Student
+2. Update Student Information
+3. View Student Details
+4. Exit
+Enter your choice: 1
 
-> javac StudentRecordManagementSystem.java
+Adding a New Student
+Enter student name: John Doe
+Enter student ID (must be unique): S12345
+Enter student age (numbers only): 20
+Enter student grade: A
+Student added successfully.
 
-2. **Run the Program:** Execute the compiled Java file using the 'java'
-    command.
+Student Record Management System
+1. Add New Student
+2. Update Student Information
+3. View Student Details
+4. Exit
+Enter your choice: 3
 
-> java StudentRecordManagementSystem
+Viewing Student Details
+Enter student ID: S12345
+Student Details:
+Name: John Doe
+ID: S12345
+Age: 20
+Grade: A
+```
 
-**Interacting with the Administrator Interface**
+## Menu Options
 
-Once the program is running, you will be presented with the
-administrator interface. Follow these steps to interact with the system:
+1. **Add New Student**: 
+   - Adds a new student with required fields: Name, ID (unique), Age (numeric), and Grade.
+   
+2. **Update Student Information**: 
+   - Allows users to update a student's information such as name, age, or grade by entering their unique student ID.
 
-1. **Main Menu:** The main menu will display the available options.
+3. **View Student Details**: 
+   - Displays all details for a student based on their unique student ID.
 
-2. **Select an Option:** Enter a number between 1 and 4 to select an
-    option from the menu. Each option corresponds to a specific
-    functionality:
+4. **Exit**: 
+   - Exits the program.
 
--  **Option 1:** Add a new student.
+## How to Run
 
--  **Option 2:** Update information for an existing student.
+### Prerequisites
+- Java Development Kit (JDK) installed.
 
--  **Option 3:** View details of a specific student.
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/stephenroque/college-assignments-repository.git
+   ```
+2. Navigate to the project folder:
+   ```bash
+   cd college-assignments-repository/CS\ 1102\ -\ Programming\ 1/Unit\ 3/
+   ```
 
--  **Option 4:** Exit the program.
+3. **Compile the Java Program**:
+   ```bash
+   javac StudentRecordManagementSystem.java
+   ```
 
-3. **Adding a New Student:**
+4. **Run the Program**: After compiling, run the program with the following command:
+   ```bash
+   java StudentRecordManagementSystem
+   ```
 
--   When choosing option 1, you\'ll be prompted to provide the following
-    information for the new student:
+5. **Interact with the System**: Follow the on-screen menu options to add, update, view, or exit.
 
-    -   Student name
+## Technologies Used
 
-    -   Student ID (must be unique)
+- **Java**: The program is written in Java and uses the `Scanner` class for user input and basic exception handling for input validation.
 
-    -   Student age (numbers only)
+---
 
-    -   Student grade
+## ⚠️ Disclaimer
 
--   Ensure that all fields are filled correctly. Empty fields or
-    non-numeric values for age will result in error messages.
+- This repository is for **educational purposes only**. 
+- Please do not use the content here to submit assignments as your own. Always adhere to your institution’s academic integrity policies. 
 
-4. **Updating Student Information:**
+## 💡 About Me
 
--   To update a student\'s information (option 2), enter the student ID
-    first.
-
--   You\'ll then be prompted to provide new information for the student,
-    including name, age, and grade. Leave a field blank to retain the
-    existing value for that attribute.
-
-5. **Viewing Student Details:**
-
--   To view the details of a specific student (option 3), enter the
-    student ID when prompted.
-
--   The program will display the student\'s name, ID, age, and grade if
-    the student exists in the system.
-
-**Error Handling**
-
-The program includes error handling mechanisms to manage various
-scenarios:
-
--  **Empty Fields:** Error messages will be displayed if any required
-    field (such as name, ID, or grade) is left empty.
-
--  **Invalid Age:** If the provided age is not a valid number, an error
-    message will be shown, and the administrator will be prompted to
-    enter a valid age.
-
--  **Duplicate ID:** If a student ID already exists in the system, the
-    administrator will be asked to enter a unique ID for the new
-    student.
+Hi, I'm **Stephen Roque**, a passionate Computer Science student at the University of the People. I'm always looking to learn and collaborate on new projects. Check out my [GitHub profile](https://github.com/stephenroque) to see more of my projects and contributions. **Connect with me on my [LinkedIn profile](https://www.linkedin.com/in/stephenroque/)!**

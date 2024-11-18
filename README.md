@@ -23,11 +23,6 @@ The repository is organized into folders by course and unit. Each folder contain
 └── ...
 ```
 
-<!-- ### Example:
-- **CS 1101-01 Programming Fundamentals**
-  - Unit 2: ""
-  - Unit 3: "" -->
-
 ## ⚠️ Disclaimer
 
 - This repository is for **educational purposes only**. 
@@ -43,8 +38,8 @@ The repository is organized into folders by course and unit. Each folder contain
 
 | **Course Name**                    | **Language** | **Status**     |
 |------------------------------------|--------       |----------------|
-| CS 1101 - Programming Fundamentals | Python        | ✅ Completed   |
-| CS 1102 - Programming 1            | Java          | ✅ Completed   |
+| [CS 1101 - Programming Fundamentals](https://github.com/stephenroque/college-assignments-repository/tree/main/CS%201101%20-%20Programming%20Fundamentals) | Python        | ✅ Completed   |
+| [CS 1102 - Programming 1](https://github.com/stephenroque/college-assignments-repository/tree/main/CS%201102%20-%20Programming%201)            | Java          | ✅ Completed   |
 | CS 1103 - Programming 2            | Java          | 🔄 In Progress |
 
 ## 💡 About Me
