@@ -41,11 +41,11 @@ The repository is organized into folders by course and unit. Each folder contain
 
 ## 📈 Progress Tracking
 
-| **Course Name**                    | **Status**     |
-|------------------------------------|----------------|
-| CS 1101 - Programming Fundamentals | ✅ Completed   |
-| CS 1102 - Programming 1            | ✅ Completed   |
-| CS 1103 - Programming 2            | 🔄 In Progress |
+| **Course Name**                    | **Language** | **Status**     |
+|------------------------------------|--------       |----------------|
+| CS 1101 - Programming Fundamentals | Python        | ✅ Completed   |
+| CS 1102 - Programming 1            | Java          | ✅ Completed   |
+| CS 1103 - Programming 2            | Java          | 🔄 In Progress |
 
 ## 💡 About Me
 
