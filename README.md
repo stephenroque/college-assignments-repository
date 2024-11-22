@@ -40,7 +40,7 @@ The repository is organized into folders by course and unit. Each folder contain
 |------------------------------------|--------       |----------------|
 | [CS 1101 - Programming Fundamentals](https://github.com/stephenroque/college-assignments-repository/tree/main/CS%201101%20-%20Programming%20Fundamentals) | Python        | ✅ Completed   |
 | [CS 1102 - Programming 1](https://github.com/stephenroque/college-assignments-repository/tree/main/CS%201102%20-%20Programming%201)            | Java          | ✅ Completed   |
-| CS 1103 - Programming 2            | Java          | 🔄 In Progress |
+| [CS 1103 - Programming 2](https://github.com/stephenroque/college-assignments-repository/tree/main/CS%201103%20-%20Programming%202)            | Java          | 🔄 In Progress |
 
 ## 💡 About Me
 
