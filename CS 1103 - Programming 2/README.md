@@ -11,8 +11,8 @@ Here’s a recommended resource to prepare for this course:
 
 ## 📅 Course Schedule  
 The course is divided into nine units, including a final exam in Week 9:  
-**Unit 1. Exceptions, the switch statement, Analysis of Algorithms**  
-**Unit 2. Recursion and Linked Lists**  
+**[Unit 1. Exceptions, the switch statement, Analysis of Algorithms](https://github.com/stephenroque/college-assignments-repository/tree/main/CS%201103%20-%20Programming%202/Unit%201)**  
+**[Unit 2. Recursion and Linked Lists](https://github.com/stephenroque/college-assignments-repository/tree/main/CS%201103%20-%20Programming%202/Unit%202)**  
 **Unit 3. ADTs, Stacks, and Queues**  
 **Unit 4. Recursive Descent Parsers and Generic Programming**  
 **Unit 5. More Generic Programming**  
