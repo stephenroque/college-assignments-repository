@@ -56,25 +56,19 @@ Thank you for playing the Formula 1 Quiz!
 - Java Development Kit (JDK) installed.
 
 ### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/stephenroque/college-assignments-repository.git
-   ```
-2. Navigate to the project folder:
-   ```bash
-   cd college-assignments-repository/CS\ 1102\ -\ Programming\ 1/Unit\ 1/
-   ```
-3. **Compile the Java Program**:
+1. **Clone or Copy the Code**
+
+2. **Compile the Java Program**:
    ```bash
    javac F1Quiz.java
    ```
 
-4. **Run the Program**: After compiling, run the program with the following command:
+3. **Run the Program**: After compiling, run the program with the following command:
    ```bash
    java F1Quiz
    ```
 
-5. **Answer the Questions**: The program will prompt you with a question and available options. Input your answer as a single character (A, B, C, or D), and it will proceed to the next question.
+4. **Answer the Questions**: The program will prompt you with a question and available options. Input your answer as a single character (A, B, C, or D), and it will proceed to the next question.
 
 ---
 

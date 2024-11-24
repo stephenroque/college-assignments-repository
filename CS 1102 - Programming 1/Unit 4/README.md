@@ -64,27 +64,19 @@ Cumulative sum (ArrayList): [10.0, 30.0, 60.0, 100.0, 130.0, 155.0, 190.0, 232.0
 - Java Development Kit (JDK) installed.
 
 ### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/stephenroque/college-assignments-repository.git
-   ```
+1. **Clone or Copy the Code**
 
-2. Navigate to the project folder:
-   ```bash
-   cd college-assignments-repository/CS\ 1102\ -\ Programming\ 1/Unit\ 4/
-   ```
-
-3. **Compile the Java Program**:
+2. **Compile the Java Program**:
    ```bash
    javac StockAnalyzer.java
    ```
 
-4. **Run the Program**: After compiling, run the program with the following command:
+3. **Run the Program**: After compiling, run the program with the following command:
    ```bash
    java StockAnalyzer
    ```
 
-5. **Test with Your Own Data**: You can modify the `pricesArray` or `pricesArrayList` with your own stock prices and experiment with the different methods.
+4. **Test with Your Own Data**: You can modify the `pricesArray` or `pricesArrayList` with your own stock prices and experiment with the different methods.
 
 ## Technologies Used
 

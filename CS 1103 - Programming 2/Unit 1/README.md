@@ -76,22 +76,13 @@ Number of unique words: 10
 
 ## How to Run
 
-### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/stephenroque/college-assignments-repository.git
-   ```
-2. Navigate to the project folder:
-   ```bash
-   cd college-assignments-repository/CS\ 1103\ -\ Programming\ 2/Unit\ 1/
-   ```
+1. **Clone or Copy the Code**
 
-### **Setup**
-2. Compile the program using:
+2. **Compile the program using:**
    ```bash
    javac TextAnalysisTool.java
    ```
-3. Run the program:
+3. **Run the program:**
    ```bash
    java TextAnalysisTool
    ```

@@ -57,15 +57,8 @@ Inverted Output:
 - Python 3.x installed.
 
 ### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/stephenroque/college-assignments-repository.git
-   ```
-2. Navigate to the project folder:
-   ```bash
-   cd college-assignments-repository/CS\ 1101\ -\ Programming\ Fundamentals/Unit\ 7/
-   ```
-3. Run any script:
+1. **Clone or Copy the Code**
+2. **Run any script:**
    ```bash
    python Programming\ Assignment\ Unit\ 7.py
    python Discussion\ Assignment\ Unit\ 7.py

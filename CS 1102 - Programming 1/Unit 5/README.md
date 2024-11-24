@@ -65,21 +65,13 @@ The project consists of the following main classes:
 - JDK 8 or higher.
 
 ### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/stephenroque/college-assignments-repository.git
-   ```
-2. Navigate to the project folder:
-   ```bash
-   cd college-assignments-repository/CS\ 1102\ -\ Programming\ 1/Unit\ 5/Course\ Enrollment\ and\ Grade\ Management\ System/src/
-   ```
+1. **Clone or Copy the Code**
 
-### **Setup**
-1. Compile the Java files:
+2. **Compile the Java files:**
    ```bash
    javac *.java
    ```
-2. Run the administrator interface:
+3. **Run the administrator interface:**
    ```bash
    java AdministratorInterface
    ```

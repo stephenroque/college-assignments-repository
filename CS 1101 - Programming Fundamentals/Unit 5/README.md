@@ -61,21 +61,14 @@ Enter the number of characters to display: 4
 ---
 
 ## How to Run
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/stephenroque/college-assignments-repository.git
-   ```
-2. Navigate to the project folder:
-   ```bash
-   cd college-assignments-repository/CS\ 1101\ -\ Programming\ Fundamentals/Unit\ 5/
-   ```
-3. Open the script in a Python environment.
-4. Set the `name` variable in the script to your desired string.
-5. Run the script:
+1. **Clone or Copy the Code**
+2. **Open the script in a Python environment.**
+3. **Set the `name` variable in the script to your desired string.**
+4. **Run the script:**
    ```bash
    python Programming\ Assignment\ Unit\ 5.py
    ```
-6. Enter the number of characters you want to display from the left of the name when prompted.
+5. **Enter the number of characters you want to display from the left of the name when prompted.**
 
 ---
 

@@ -82,26 +82,19 @@ Grade: A
 - Java Development Kit (JDK) installed.
 
 ### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/stephenroque/college-assignments-repository.git
-   ```
-2. Navigate to the project folder:
-   ```bash
-   cd college-assignments-repository/CS\ 1102\ -\ Programming\ 1/Unit\ 3/
-   ```
+1. **Clone or Copy the Code**
 
-3. **Compile the Java Program**:
+2. **Compile the Java Program**:
    ```bash
    javac StudentRecordManagementSystem.java
    ```
 
-4. **Run the Program**: After compiling, run the program with the following command:
+3. **Run the Program**: After compiling, run the program with the following command:
    ```bash
    java StudentRecordManagementSystem
    ```
 
-5. **Interact with the System**: Follow the on-screen menu options to add, update, view, or exit.
+4. **Interact with the System**: Follow the on-screen menu options to add, update, view, or exit.
 
 ## Technologies Used
 

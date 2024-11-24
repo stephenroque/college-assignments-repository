@@ -84,21 +84,13 @@ The user interface is based on a tabbed layout:
 - JDK 8 or higher.
 
 ### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/stephenroque/college-assignments-repository.git
-   ```
-2. Navigate to the project folder:
-   ```bash
-   cd college-assignments-repository/CS\ 1102\ -\ Programming\ 1/Unit\ 7/StudentManagementSystem/src/
-   ```
+1. **Clone or Copy the Code**
 
-### **Setup**
-1. Compile the Java files:
+2. **Compile the Java files:**
    ```bash
    javac *.java
    ```
-2. Run the `StudentManagementSystem` class:
+3. **Run the `StudentManagementSystem` class:**
    ```bash
    java StudentManagementSystem
    ```
