@@ -5,9 +5,10 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Demonstrates the functionality of the e-commerce system with interactive features.
+ * Demonstrates the functionality of the e-commerce system with interactive features
+ * and error handling for invalid inputs.
  * 
- * @author Stephen
+ * @author Stephen Roque
  */
 public class App {
     public static void main(String[] args) {
@@ -29,7 +30,11 @@ public class App {
 
         // Create a customer
         System.out.print("\nEnter your name: ");
-        String customerName = scanner.nextLine();
+        String customerName = scanner.nextLine().trim();
+        while (customerName.isEmpty()) {
+            System.out.print("Name cannot be empty. Please enter your name: ");
+            customerName = scanner.nextLine().trim();
+        }
         Customer customer = new Customer(1, customerName);
         System.out.println("Hello, " + customer.getName() + "!");
 
@@ -41,8 +46,8 @@ public class App {
             System.out.println("2. View Cart");
             System.out.println("3. Place Order");
             System.out.println("4. Exit");
-            System.out.print("Choose an option: ");
-            int choice = scanner.nextInt();
+
+            int choice = getValidInteger(scanner, "Choose an option: ", 1, 4);
 
             switch (choice) {
                 case 1:
@@ -51,14 +56,12 @@ public class App {
                         System.out.println(product);
                     }
 
-                    System.out.print("\nEnter the Product ID to add to cart (or 0 to go back): ");
-                    int productId = scanner.nextInt();
+                    int productId = getValidInteger(scanner, "Enter the Product ID to add to cart (or 0 to go back): ", 0, products.size());
 
                     if (productId == 0) {
                         break;
                     }
 
-                    // Find the selected product
                     Product selectedProduct = products.stream()
                             .filter(p -> p.getProductID() == productId)
                             .findFirst()
@@ -66,7 +69,6 @@ public class App {
 
                     if (selectedProduct != null) {
                         customer.addToCart(selectedProduct);
-                        System.out.println(selectedProduct.getName() + " added to cart.");
                     } else {
                         System.out.println("Invalid Product ID.");
                     }
@@ -108,5 +110,35 @@ public class App {
         }
 
         scanner.close();
+    }
+
+    /**
+     * Prompts the user for an integer input and validates the range.
+     * 
+     * @param scanner Scanner for user input
+     * @param prompt  Prompt message for the user
+     * @param min     Minimum valid value
+     * @param max     Maximum valid value
+     * @return A valid integer within the specified range
+     */
+    private static int getValidInteger(Scanner scanner, String prompt, int min, int max) {
+        int input = -1;
+        boolean valid = false;
+
+        while (!valid) {
+            System.out.print(prompt);
+            try {
+                input = Integer.parseInt(scanner.nextLine());
+                if (input >= min && input <= max) {
+                    valid = true;
+                } else {
+                    System.out.println("Invalid choice. Please enter a number between " + min + " and " + max + ".");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a valid number.");
+            }
+        }
+
+        return input;
     }
 }

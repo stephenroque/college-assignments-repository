@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Represents an order placed by a customer.
  * 
- * @author Stephen
+ * @author Stephen Roque
  */
 public class Order {
     private static int orderCounter = 1;
